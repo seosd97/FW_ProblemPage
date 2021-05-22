@@ -1,0 +1,18 @@
+@import './colors.scss';
+
+.problem-section {
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+
+    .sh-title {
+      margin-left: 23px;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20.27px;
+      color: $black;
+    }
+  }
+}
