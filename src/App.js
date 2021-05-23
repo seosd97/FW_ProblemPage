@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import ProblemSection from "./components/ProblemSection";
+import SimilarSection from "./components/SimilarSection";
 import * as problemDuck from './ducks/problems';
 
 function App() {
@@ -9,16 +10,20 @@ function App() {
   // Initialize problems
   useEffect(() => {
     dispatch(problemDuck.fetchProblems());
-    dispatch(problemDuck.fetchProblems());
+    dispatch(problemDuck.fetchSimilarProblems());
   }, [dispatch]);
 
-  const data = useSelector(state => state.problems.problems);
-  console.log(data);
-
   return (
-    <div className="App">
-      <ProblemSection title="학습지 상세 편집" />
-    </div>
+    <main>
+      <section className="section-container">
+        <ProblemSection
+          title="학습지 상세 편집"
+        />
+        <SimilarSection
+          title="문항 교체/추가"
+        />
+      </section>
+    </main>
   );
 }
 

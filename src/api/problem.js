@@ -8,7 +8,7 @@ export const getProblems = async () => {
   return res.data;
 };
 
-export const getSimialProblems = async () => {
+export const getSimilarProblems = async () => {
   const res = await axios.get(`${ENDPOINT}/similars.json`);
 
   return res.data;
