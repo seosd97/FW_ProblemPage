@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import Button from './Button';
 
 const SimilarProblemItem = ({
   index,
@@ -24,8 +25,8 @@ const SimilarProblemItem = ({
         <div className="pi-header-type">{problem.problemType}</div>
         <div className="pi-header-unitname">{problem.unitName}</div>
         <div className="problem-item-button-container">
-          <input type="button" value="추가" onClick={onClickAdd} />
-          <input type="button" value="교체" onClick={onClickSwap} />
+          <Button text="추가" onClick={onClickAdd} />
+          <Button text="교체" onClick={onClickSwap} />
         </div>
       </div>
       <div className="problem-item-content">

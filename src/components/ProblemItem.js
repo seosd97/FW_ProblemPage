@@ -1,4 +1,6 @@
 import React, { useCallback } from 'react';
+import Button from './Button';
+import CheckBox from './CheckBox';
 
 const ProblemItem = ({
   index,
@@ -24,8 +26,8 @@ const ProblemItem = ({
         <div className="pi-header-type">{problem.problemType}</div>
         <div className="pi-header-unitname">{problem.unitName}</div>
         <div className="problem-item-button-container">
-          <input type="checkbox" value="유사문항" onClick={onClickSimilar} />
-          <input type="button" value="삭제" onClick={onClickRemove} />
+          <CheckBox id={problem.id} text="유사문항" onClick={onClickSimilar} />
+          <Button text="삭제" onClick={onClickRemove} />
         </div>
       </div>
       <div className="problem-item-content">
